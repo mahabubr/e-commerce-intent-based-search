@@ -2,6 +2,8 @@
   "cSpell.words": [
     "dotenv",
     "faiss",
+    "fillna",
+    "iloc",
     "isna",
     "Itemmodelnumber",
     "Manufacturerrecommendedage"
