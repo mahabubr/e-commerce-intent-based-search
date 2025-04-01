@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from .api.endpoints import search
+from .api.endpoints import intent_search
 
 app = FastAPI()
 
-app.include_router(search.router)
+app.include_router(intent_search.router)
 
 
 @app.get("/")
