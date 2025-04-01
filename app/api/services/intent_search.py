@@ -1,6 +1,7 @@
 import faiss
 import os
-from app.helpers.embedding import embedding
+from app.models.embedding import embedding
+from app.models.query import query
 import pandas as pd
 
 index_path = os.getcwd() + "/app/database/products_vector.bin"
@@ -12,6 +13,8 @@ products = pd.read_csv(products_path)
 
 
 def perform_intent_search(search):
+    query(search)
+
     search_embed = embedding(search)
 
     top_k = 10
