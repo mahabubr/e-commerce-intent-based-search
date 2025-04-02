@@ -13,9 +13,9 @@ products = pd.read_csv(products_path)
 
 
 def perform_intent_search(search):
-    query(search)
+    refineSearch = query(search)
 
-    search_embed = embedding(search)
+    search_embed = embedding(refineSearch)
 
     top_k = 10
     distance, indices = index.search(search_embed, top_k)
